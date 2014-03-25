@@ -12,8 +12,8 @@ static int __init call_usermodehelper_init(void)
 	char path[] = "/bin/mkdir";
 	char *argv[] = {path, "-p", "/home/tester/new/new_dir", NULL};
 	*/
-	char path[] = "/bin/ls";
-	char *argv[] = {NULL};
+	char path[] = "/bin/bash";
+	char *argv[] = {path, "-c", "ls", "-la", ">", "/home/tester/ls_output", NULL};
 	char *envp[] = {NULL};
 
 	printk("call_usermodehelper module is starting..!\n");
